@@ -11,7 +11,7 @@ email: info@burgerrebellion.ca
 description: > # this means to ignore newlines until "baseurl:"
   A burger truck in Downtown Sarnia
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "http://storyboardinc.github.io/brgrrebellion" # the base hostname & protocol for your site
 twitter_username: brgrrebellion
 github_username:  storyboardinc
 
