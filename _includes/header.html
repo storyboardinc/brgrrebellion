@@ -7,14 +7,6 @@
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=1536763016623739";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
-
-  FB.Event.subscribe('edge.create', function(targetUrl) {
-    _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
-  });
-
-  FB.Event.subscribe('edge.remove', function(targetUrl) {
-    _gaq.push(['_trackSocial', 'facebook', 'unlike', targetUrl]);
-  });
 </script>
 
 <header class="site-header">
