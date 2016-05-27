@@ -167,14 +167,11 @@ table.hours {
     // }
 }
 
-// table.menu {
-//     th {
-//         width: 80%;
-//     }
-//     td {
-//         width: 20%;
-//     }
-// }
+table.menu {
+    td {
+        width: 70px;
+    }
+}
 
 .location-heading {
     margin-bottom: $spacing-unit/4;
