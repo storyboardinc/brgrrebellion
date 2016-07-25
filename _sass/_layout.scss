@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: .1em;
 }
 
+.gold-text {
+    color: $gold;
+}
+
 /**
  * Site header
  */
@@ -20,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .wrapper {
         text-align: center;
+
+        h6 {
+            margin-bottom: $spacing-unit;
+        }
     }
 }
 
@@ -49,12 +57,12 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
     display: block;
     max-width: 300px;
-    margin: 0 auto $spacing-unit*1.25 auto;
+    margin: 0 auto $spacing-unit/2 auto;
 }
 
 .icon {
-    max-width: 70px;
-    margin-top: 30px;
+    max-width: 80px;
+    margin-top: 32px;
     @include media-query($on-palm) {
         display: none;
     }
@@ -158,7 +166,11 @@ table.menu {
 }
 
 .location-heading {
-    margin-bottom: $spacing-unit/4;
+    margin-bottom: 0;
+}
+
+.map-img {
+    border: 1px solid $cream;
 }
 
 h1, h2 {
