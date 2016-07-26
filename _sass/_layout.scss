@@ -31,6 +31,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.notification {
+    text-align: center;
+    background: $orange;
+    padding: 10px 15px;
+}
+
 .social-links {
     list-style: none;
     text-align: center;
