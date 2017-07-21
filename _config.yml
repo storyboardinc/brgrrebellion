@@ -9,7 +9,7 @@
 title: Burger Rebellion - A food truck in downtown Sarnia
 email: info@burgerrebellion.ca
 description: > # this means to ignore newlines until "baseurl:"
-  A food truck in downtown Sarnia
+  We're grillers, not fighters. Our mission is in the name of a tasty meal. A revolution for the taste buds, an insurrection against the barons of mediocrity.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.burgerrebellion.ca" # the base hostname & protocol for your site
 twitter_username: brgrrebellion

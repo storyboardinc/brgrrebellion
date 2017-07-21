@@ -4,7 +4,7 @@
 h1, h2, h3, h4, h5, h6 {
     line-height: 1;
     font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .1em;
 }
@@ -19,15 +19,45 @@ h1, h2, h3, h4, h5, h6 {
 .site-header {
     // Positioning context for the mobile navigation icon
     position: relative;
+    padding-top: $spacing-unit;
     padding-bottom: $spacing-unit;
-    border-top: 2px solid $orange;
 
-    .wrapper {
-        text-align: center;
+    .brand {
+        position: absolute;
+        top: $spacing-unit;
+        width: 100%;
+        padding: 0 $spacing-unit;
 
-        h6 {
+        h5 {
             margin-bottom: $spacing-unit;
+            @include media-query(500px) {
+                font-size: 10.72px;
+            }
         }
+    }
+}
+
+.header-img {
+    display: block;
+    background: $gold;
+    width: 100%;
+    border-bottom: 3px solid $gold;
+}
+
+.header-img-sm {
+    display: none;
+
+    @include media-query($on-laptop) {
+        display: none;
+    }
+    @include media-query($on-palm) {
+        display: block;
+    }
+}
+
+.header-img-lg {
+    @include media-query($on-palm) {
+        display: none;
     }
 }
 
@@ -42,59 +72,15 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.social-links {
-    list-style: none;
-    text-align: center;
-    margin-left: 0;
-    margin-bottom: $spacing-unit;
-    background: $cream;
-    padding: $spacing-unit/2;
-
-    li {
-        display: inline-block;
-        margin: 0 5px;
-
-        a {
-            display: block;
-        }
-    }
-
-    img {
-        width: 24px;
-        height: 24px;
-    }
-}
-
 .logo {
     display: block;
-    max-width: 300px;
+    max-width: 460px;
     margin: 0 auto $spacing-unit/2 auto;
 }
 
-.icon {
-    max-width: 80px;
-    margin-top: 32px;
-    @include media-query($on-palm) {
-        display: none;
-    }
-}
-
-.icon-left {
-    float: left;
-}
-
-.icon-right {
-    float: right;
-}
-
-// .fb-btn {
-//     text-align: center;
-//     min-height: 24px;
-// }
-
 a.btn {
     font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: .1em;
@@ -111,17 +97,16 @@ a.btn {
         color: $cream;
         text-decoration: none;
     }
+
+    @include media-query(500px) {
+        font-size: 12px;
+    }
 }
 
 
 /**
  * Homepage
  */
-.grid {
-    border-top: 1px solid $cream;
-    padding-top: $spacing-unit;
-}
-
 table {
     width: 100%;
     font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -137,7 +122,7 @@ table {
 
     th {
         text-align: left;
-        font-weight: 600;
+        font-weight: 700;
 
         p {
             font-family: $base-font-family;
@@ -177,40 +162,103 @@ table.menu {
     }
 }
 
-.location-heading {
-    margin-bottom: 0;
+.menu-col {
+    @include media-query($on-laptop) {
+        padding-right: 0 !important;
+    }
 }
 
-.map-img {
-    border: 1px solid $cream;
+.location-heading {
+    margin-bottom: 0;
 }
 
 h1, h2 {
     color: $gold;
 }
 
+.icon-xs {
+    width: 20px;
+    margin-top: 0;
+    margin-left: 5px;
+    vertical-align: baseline;
 
-
-@include media-query($on-laptop) {
-  .menu-col {
-    padding-right: 0 !important;
-  }
+    @include media-query($on-palm) {
+        display: inline;
+    }
 }
 
-@include media-query($on-palm) {
+.specials-disclaimer {
+    margin-bottom: $spacing-unit*1.5;
+}
 
+.specials {
+    border-top: 2px solid $gold;
+    padding-top: $spacing-unit;
+
+    h3 {
+        color: $orange;
+    }
+}
+
+.about {
+    @include media-query($on-laptop) {
+        display: none;
+    }
+    @include media-query($on-palm) {
+        display: block;
+    }
+}
+
+.about-tablet {
+    display: none;
+
+    @include media-query($on-laptop) {
+        display: block;
+        margin-top: $spacing-unit;
+    }
+
+    @include media-query($on-palm) {
+        display: none;
+    }
 }
 
 /**
  * Site footer
  */
 .site-footer {
-    padding: $spacing-unit 0;
     text-align: center;
 }
 
 .icon-footer {
+    max-width: 60px;
+    margin-bottom: $spacing-unit;
+    margin-top: 0;
+
     @include media-query($on-palm) {
         display: inline;
+    }
+}
+
+.social-links {
+    list-style: none;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: $spacing-unit*2;
+    border-top: 2px solid $gold;
+    border-bottom: 2px solid $gold;
+    padding: $spacing-unit/2;
+
+    li {
+        display: inline-block;
+        margin: 0 10px;
+
+        a {
+            display: block;
+        }
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
     }
 }
