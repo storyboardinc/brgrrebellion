@@ -2,71 +2,127 @@
 layout: default
 ---
 
-<div class="grid">
+<h2 class="text-center">Our Locations</h2>
+<div class="grid mb-2">
 
-  <div class="col-1-3">
-    <h2>Hours</h2>
-    <p>Closed for the season.</p>
-<!--     <table class="hours">
-      <tbody>
-        <tr>
-          <th>Sun-Thu</th>
-          <td>11<span>am</span>-8:30<span>pm</span></td>
-        </tr>
-        <tr>
-          <th>Fri-Sat</th>
-          <td>11<span>am</span>-12<span>am</span></td>
-        </tr>
-      </tbody>
-    </table> -->
-    <h2>Location</h2>
-    <h4 class="location-heading">108 Davis St, Sarnia</h4>
-    <p>Corner of Front & Davis</p>
-    <a href="https://goo.gl/maps/kFEQ9mM7Tfs" target="_blank"><img class="map-img" src="{{ site.baseurl }}/img/map.png" alt="Burger Rebellion location at Front and Davis"></a>
-    <div class="about-tablet">
-      <h1>We’re grillers,<br>not fighters.</h1>
-      <p>Our mission is in the name of a tasty meal. A revolution for the taste buds, an insurrection against the barons of mediocrity. Our rebellion endures to free our sons and daughters from the tyranny of low-brow burgers.</p>
-      <p>With options for carnivores and herbivores alike, our menu offers the very best in locally sourced meat, veggies, and breads.</p>
-      <h4 class="gold-text">Join the rebellion. <img class="icon icon-xs" src="{{ site.baseurl }}/img/br-icon.svg" alt="Burger Rebellion"></h4>
+  <div class="col col-location">
+    <img src="{{ site.baseurl }}/img/downtown.jpg" alt="Downtown Location">
+    <div class="inner-content">
+      <h3>Downtown</h3>
+      <p>It all started with our downtown food truck. Here you can take food to go or stay and eat on our shaded patio.</p>
+      <a class="caps-link" href="https://goo.gl/maps/kFEQ9mM7Tfs" target="_blank">108 Davis St</a>
     </div>
+    <div class="notification">Back soon!</div>
   </div>
 
-  <div class="col-1-3 menu-col">
-    <h2>Menu</h2>
-    <p>Our burgers are made with a 1/4 lb. of fresh-ground Canadian Angus beef and are cooked to order.</p>
-    <table class="menu">
+  <div class="col col-location">
+    <img src="{{ site.baseurl }}/img/midtown.jpg" alt="Midtown Location">
+    <div class="inner-content">
+      <h3>Midtown</h3>
+      <p>Our second location just happens to be inside <a href="https://www.refinedfool.com" target="_blank">Sarnia's brewery</a>. Craft beers and burgers—together at last.</p>
+      <a class="caps-link" href="https://goo.gl/maps/FTbmCuBPrjR2" target="_blank">1326 London Rd</a>
+        &#8594;
+      <a class="caps-link" href="javascript:;" data-micromodal-trigger="midtown-hours">Hours</a>
+
+      <div class="modal micromodal-slide" id="midtown-hours" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header class="modal__header">
+              <h2 class="modal__title" id="modal-1-title">
+                Midtown Hours
+              </h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+              <table class="hours">
+                <tbody>
+                  <tr>
+                    <th>Sun-Wed</th>
+                    <td>11<span>am</span>-12<span>am</span></td>
+                  </tr>
+                  <tr>
+                    <th>Thu-Sat</th>
+                    <td>11<span>am</span>-2<span>am</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </main>
+          </div>
+        </div>
+      </div><!-- end modal -->
+
+    </div>
+    <div class="notification">Now open!</div>
+  </div>
+
+</div><!-- end row -->
+
+<div class="about text-center">
+  <h2>We’re grillers,<br>not fighters.</h2>
+  <p>Our mission is in the name of a tasty meal. A revolution for the taste buds, an insurrection against the barons of mediocrity. Our rebellion endures to free our sons and daughters from the tyranny of low-brow burgers.</p>
+  <!-- <p>With options for carnivores and herbivores alike, our menu offers the very best in locally sourced meat, veggies, and breads.</p> -->
+  <h4 class="gold-text">Taste the freedom</h4>
+  <img class="icon icon-xs" src="{{ site.baseurl }}/img/br-icon.svg" alt="Burger Rebellion">
+</div>
+
+<h2 class="text-center">Our Menu</h2>
+<p class="text-center text-sm mb-3"><span class="badge">M</span> Items with this badge are only available at our Midtown location.</p>
+<div class="grid">
+
+  <div class="col menu-col">
+    <img class="menu-heading" src="{{ site.baseurl }}/img/burgers.svg" alt="Burgers & Sandwiches">
+    <table class="menu mb-2">
       <tbody>
         <tr>
           <th>Burger</th>
-          <td>5.99</td>
+          <td>6.49</td>
         </tr>
         <tr>
           <th>Cheeseburger</th>
-          <td>6.99</td>
-        </tr>
-        <tr>
-          <th>The Interrogator<br>
-            <p>A cheeseburger wrapped in grilled cheese sandwiches.</p>
-          </th>
-          <td>8.99</td>
-        </tr>
-        <tr>
-          <th>The Uprising<br>
-            <p>A cheeseburger with fried egg, bacon, hash brown, and real Canadian maple syrup.</p>
-          </th>
-          <td>8.99</td>
+          <td>7.49</td>
         </tr>
         <tr>
           <th>The Zealot<br>
             <p>Two cheeseburger patties with bacon.</p>
           </th>
-          <td>9.49</td>
+          <td>9.99</td>
         </tr>
+        <tr>
+          <th>The Interrogator<br>
+            <p>A cheeseburger wrapped in grilled cheese sandwiches.</p>
+          </th>
+          <td>9.99</td>
+        </tr>
+        <tr>
+          <th>The Uprising<br>
+            <p>A cheeseburger with fried egg, bacon, hash brown, and real Canadian maple syrup.</p>
+          </th>
+          <td>9.99</td>
+        </tr>
+        <tr>
+          <th>The Coward <span class="badge">M</span><br>
+            <p>A fried chicken sandwich with cheese, pickles, and rebel sauce.</p>
+          </th>
+          <td>8.99</td>
+        </tr>
+        <tr>
+          <th>The Spicy Coward <span class="badge">M</span><br>
+            <p>A fried and sauced chicken sandwich with cheese, pickles, and rebel sauce.</p>
+          </th>
+          <td>8.99</td>
+        </tr>
+        <tr>
+          <th>The Puritan<br>
+            <p>A black bean, sweet potato, and cilantro patty.</p>
+          </th>
+          <td>8.99</td>
+        </tr>
+        <tr>
         <tr>
           <th>The Reformer<br>
             <p>A curried lentil and chickpea patty topped with caramelized onions and mango chutney.</p>
           </th>
-          <td>7.99</td>
+          <td>8.99</td>
         </tr>
         <tr>
           <th>The Traitor<br>
@@ -80,6 +136,12 @@ layout: default
           </th>
           <td>2.49</td>
         </tr>
+      </tbody>
+    </table>
+
+    <img class="menu-heading menu-heading--extras" src="{{ site.baseurl }}/img/extras.svg" alt="Extras">
+    <table class="menu">
+      <tbody>
         <tr>
           <th>Rebel Chips<br>
             <p>Fresh house-made ribbon chips.</p>
@@ -87,53 +149,42 @@ layout: default
           <td>3.49</td>
         </tr>
         <tr>
-          <th>Old-Fashioned Float<br>
-            <p>Ginger Ale, Cream Soda, Root Beer, Orange</p>
+          <th>Guerrilla Fries <span class="badge">M</span><br>
+            <p>Fresh cut, beer-battered, and superbly seasoned fries.</p>
           </th>
-          <td>3.49</td>
+          <td>3.99</td>
         </tr>
-        <tr class="table-break"></tr>
         <tr>
-          <th>Chip Dips<br>
+          <th>Chili<br>
+            <p>House-made beef or vegan chili.</p>
+          </th>
+          <td>6.99</td>
+        </tr>
+        <tr>
+          <th>Propaganda <span class="badge">M</span><br>
+            <p>Nachos loaded and layered with chili (beef or veggie), cheese, green onions, and sour cream.</p>
+          </th>
+          <td>14.99</td>
+        </tr>
+        <tr>
+          <th>House-Made Dips<br>
             <p>Jalapeño Cheddar, Creamy Dill, Garlic Parmesan, Rebel Sauce</p>
           </th>
-          <td>.99</td>
-        </tr>
-        <tr>
-          <th>Burger Add-Ons<br>
-            <p>Bacon, Chili, Caramelized Onions, Fried Egg, Fried Mushrooms, Extra Cheese, Gluten Free Vegan Bun</p>
-          </th>
-          <td>.99</td>
-        </tr>
-        <tr class="table-break"></tr>
-        <tr>
-          <th>Extra patty</th>
-          <td>2.49</td>
-        </tr>
-        <tr>
-          <th>Pop & Water</th>
           <td>1.25</td>
         </tr>
         <tr>
-          <th>Make It a Combo<br>
-            <p>Add Rebel Chips and a drink.</p>
+          <th>Old-Fashioned Float<br>
+            <p>Your choice of pop poured over vanilla ice cream and blended.</p>
           </th>
-          <td>3.79</td>
+          <td>3.99</td>
         </tr>
       </tbody>
     </table>
-  </div>
+  </div><!-- end column -->
 
-  <div class="col-1-3 about">
-    <h1>We’re grillers,<br>not fighters.</h1>
-    <p>Our mission is in the name of a tasty meal. A revolution for the taste buds, an insurrection against the barons of mediocrity. Our rebellion endures to free our sons and daughters from the tyranny of low-brow burgers.</p>
-    <p>With options for carnivores and herbivores alike, our menu offers the very best in locally sourced meat, veggies, and breads.</p>
-    <h4 class="gold-text">Join the rebellion. <img class="icon icon-xs" src="{{ site.baseurl }}/img/br-icon.svg" alt="Burger Rebellion"></h4>
-  </div>
+</div><!-- end row -->
 
-</div>
-
-<div class="grid specials">
+<!-- <div class="grid specials">
   <h2>Weekly Specials</h2>
   <p class="specials-disclaimer">Avaible exclusively for walk-up orders at the truck.</p>
   <div class="col-1-4">
@@ -152,4 +203,4 @@ layout: default
     <h3>Wednesday</h3>
     <p>Get 20% off The Reformer combo all day.</p>
   </div>
-</div>
+</div> --><!-- end row -->

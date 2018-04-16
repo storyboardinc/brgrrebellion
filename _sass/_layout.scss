@@ -1,4 +1,23 @@
 /**
+ * Grid
+ */
+.grid {
+  display: flex;
+}
+.col {
+  flex: 1;
+  margin: $spacing-unit;
+}
+@include media-query($on-palm) {
+  .col {
+    margin: $spacing-unit 0;
+  }
+  .grid {
+    display: block;
+  }
+}
+
+/**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
@@ -9,8 +28,40 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: .1em;
 }
 
+/**
+ * Mixins
+ */
+
 .gold-text {
     color: $gold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-sm {
+    font-size: $small-font-size;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-1 {
+    margin-bottom: $spacing-unit/2;
+}
+
+.mb-2 {
+    margin-bottom: $spacing-unit;
+}
+
+.mb-3 {
+    margin-bottom: $spacing-unit*1.5;
+}
+
+.mb-4 {
+    margin-bottom: $spacing-unit*2;
 }
 
 /**
@@ -19,19 +70,24 @@ h1, h2, h3, h4, h5, h6 {
 .site-header {
     // Positioning context for the mobile navigation icon
     position: relative;
-    padding-top: $spacing-unit;
-    padding-bottom: $spacing-unit;
+    // padding-top: $spacing-unit;
+    margin-bottom: $spacing-unit*1.5;
+    border-bottom: 2px solid $gold;
 
     .brand {
         position: absolute;
-        top: $spacing-unit;
+        top: $spacing-unit*3.5;
         width: 100%;
-        padding: 0 $spacing-unit;
+        padding: 0 $spacing-unit/2;
 
-        h5 {
+        @include media-query(500px) {
+            top: $spacing-unit*2.5;
+        }
+
+        h1 {
             margin-bottom: $spacing-unit;
             @include media-query(500px) {
-                font-size: 10.72px;
+                font-size: 12px;
             }
         }
     }
@@ -41,7 +97,6 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     background: $gold;
     width: 100%;
-    border-bottom: 3px solid $gold;
 }
 
 .header-img-sm {
@@ -64,7 +119,15 @@ h1, h2, h3, h4, h5, h6 {
 .notification {
     text-align: center;
     background: $orange;
-    padding: 10px 15px;
+    color: $cream;
+    // border-bottom: 2px solid $gold;
+    padding: 15px;
+    font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    // margin-bottom: $spacing-unit*1.5;
 
     a {
         color: $cream;
@@ -72,9 +135,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.brand {
+    h1 {
+        font-size: $base-font-size;
+        color: $cream;
+
+    }
+}
+
 .logo {
     display: block;
-    max-width: 460px;
+    max-width: 580px;
     margin: 0 auto $spacing-unit/2 auto;
 }
 
@@ -103,14 +174,71 @@ a.btn {
     }
 }
 
+.social-links {
+    list-style: none;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 0;
+    border-bottom: 2px solid $gold;
+    padding: $spacing-unit/2;
+
+    li {
+        display: inline-block;
+        margin: 0 10px;
+
+        a {
+            display: block;
+        }
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 
 /**
  * Homepage
  */
+.col-location {
+    background: $cream;
+}
+
+.inner-content {
+    padding: $spacing-unit;
+    color: $black;
+
+    @include media-query(400px) {
+        padding: $spacing-unit $spacing-unit/2;
+    }
+
+    a {
+        color: $orange;
+    }
+
+    .caps-link {
+        font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: $small-font-size;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: .1em;
+        color: $orange;
+        border-bottom: 2px solid $orange;
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+            outline: none;
+        }
+    }
+}
+
 table {
     width: 100%;
     font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .1em;
     table-layout: fixed;
@@ -149,8 +277,7 @@ table {
 }
 
 table.hours {
-    margin-bottom: $spacing-unit;
-    color: $cream;
+    color: $black;
     th {
         width: 90px;
     }
@@ -163,13 +290,35 @@ table.menu {
 }
 
 .menu-col {
-    @include media-query($on-laptop) {
-        padding-right: 0 !important;
-    }
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menu-heading {
+    max-height: 40px;
+    margin-bottom: $spacing-unit;
+}
+
+.menu-heading--extras {
+    max-height: 30px;
 }
 
 .location-heading {
     margin-bottom: 0;
+}
+
+.badge {
+    font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0;
+    color: $cream;
+    background: $orange;
+    padding: 1px 3px 0px 3px;
+    border-radius: 25%;
+    vertical-align: top;
 }
 
 h1, h2 {
@@ -177,14 +326,14 @@ h1, h2 {
 }
 
 .icon-xs {
-    width: 20px;
+    width: 30px;
     margin-top: 0;
-    margin-left: 5px;
+    margin-left: 0;
     vertical-align: baseline;
 
-    @include media-query($on-palm) {
-        display: inline;
-    }
+    // @include media-query($on-palm) {
+    //     display: inline;
+    // }
 }
 
 .specials-disclaimer {
@@ -201,64 +350,175 @@ h1, h2 {
 }
 
 .about {
-    @include media-query($on-laptop) {
-        display: none;
+    max-width: 500px;
+    margin: $spacing-unit*3 auto $spacing-unit*3 auto;
+
+    h2 {
+        font-size: 3em;
+        margin-bottom: $spacing-unit/2;
+
+        @include media-query(500px) {
+            font-size: 2em;
+        }
     }
-    @include media-query($on-palm) {
-        display: block;
+
+    p {
+        font-size: 1.25em;
+        margin-bottom: $spacing-unit;
     }
+
+    // @include media-query($on-laptop) {
+    //     display: none;
+    // }
+    // @include media-query($on-palm) {
+    //     display: block;
+    // }
 }
 
-.about-tablet {
-    display: none;
+// .about-tablet {
+//     display: none;
 
-    @include media-query($on-laptop) {
-        display: block;
-        margin-top: $spacing-unit;
-    }
+//     @include media-query($on-laptop) {
+//         display: block;
+//         margin-top: $spacing-unit;
+//     }
 
-    @include media-query($on-palm) {
-        display: none;
-    }
-}
+//     @include media-query($on-palm) {
+//         display: none;
+//     }
+// }
 
 /**
  * Site footer
  */
 .site-footer {
     text-align: center;
+
+    .social-links {
+        border-bottom: 0;
+        border-top: 2px solid $gold;
+    }
 }
 
 .icon-footer {
-    max-width: 60px;
+    max-width: 70px;
     margin-bottom: $spacing-unit;
-    margin-top: 0;
+    margin-top: $spacing-unit*4;
 
     @include media-query($on-palm) {
         display: inline;
     }
 }
 
-.social-links {
-    list-style: none;
-    text-align: center;
-    margin-left: 0;
-    margin-bottom: $spacing-unit*2;
-    border-top: 2px solid $gold;
-    border-bottom: 2px solid $gold;
-    padding: $spacing-unit/2;
+/**************************\
+  Basic Modal Styles
+\**************************/
 
-    li {
-        display: inline-block;
-        margin: 0 10px;
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-        a {
-            display: block;
-        }
-    }
+.modal__container {
+  background-color: $cream;
+  color: $black;
+  padding: $spacing-unit;
+  max-width: 300px;
+  max-height: 100vh;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
 
-    img {
-        width: 30px;
-        height: 30px;
-    }
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: $orange;
+  box-sizing: border-box;
+}
+
+.modal__close {
+  background: transparent;
+  color: rgba(0,0,0,0.6);
+  border: 0;
+  font-size: 1em;
+  margin-right: -25px;
+  margin-top: -43px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal__header .modal__close:before { content: "\2715"; }
+
+.modal__content {
+  margin-top: $spacing-unit;
+}
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
 }

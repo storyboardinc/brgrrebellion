@@ -1,4 +1,14 @@
 <script>
+  MicroModal.init({
+    onShow: modal => console.info(`${modal.id} is shown`), // [1]
+    onClose: modal => console.info(`${modal.id} is hidden`), // [2]
+    disableScroll: true, // [5]
+    disableFocus: false, // [6]
+    awaitCloseAnimation: true, // [7]
+    debugMode: false // [8]
+  });
+</script>
+<script>
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
   ga('create', 'UA-77350318-1', 'auto');
   ga('require', 'autotrack');
