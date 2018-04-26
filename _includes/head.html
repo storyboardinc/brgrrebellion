@@ -6,6 +6,110 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Burger Rebellion",
+    "description": "Sarnia's Burger Joint",
+    "image": "https://www.burgerrebellion.ca/img/br-profile-pic.jpg",
+    "@id": "https://www.burgerrebellion.ca",
+    "url": "https://www.burgerrebellion.ca",
+    "sameAs": ["https://www.facebook.com/brgrrebellion","https://www.twitter.com/brgrrebellion","https://plus.google.com/+BurgerRebellionSarnia","https://instagram.com/brgrrebellion"],
+    "location":
+    [
+      {
+        "@type": "Restaurant",
+        "parentOrganization": { "name": "Burger Rebellion" },
+        "name" : "Burger Rebellion - Downtown",
+        "image": "https://www.burgerrebellion.ca/img/br-profile-pic.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sarnia",
+          "addressRegion": "Ontario",
+          "postalCode": "N7T1A2",
+          "streetAddress": "108 Davis St"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.97103,
+          "longitude": -82.4093027
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Sunday"
+          ],
+          "opens": "11:00",
+          "closes": "20:30"
+        },{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "11:00",
+          "closes": "23:30"
+        }],
+        "telephone" : "+1 519-704-1340",
+        "sameAs": "https://www.facebook.com/burgerrebelliondowntown",
+        "priceRange": "$$",
+        "servesCuisine": "Hamburgers",
+        "hasMenu": "https://www.burgerrebellion.ca",
+        "paymentAccepted":"Cash, Credit Card"
+      },
+      {
+        "@type": "Restaurant",
+        "parentOrganization": { "name": "Burger Rebellion" },
+        "name" : "Burger Rebellion - Midtown",
+        "image": "https://www.burgerrebellion.ca/img/br-profile-pic.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sarnia",
+          "addressRegion": "Ontario",
+          "postalCode": "N7S1P7",
+          "streetAddress": "1326 London Rd"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.980443,
+          "longitude": -82.3569621
+        },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Sunday"
+          ],
+          "opens": "11:00",
+          "closes": "24:00"
+        },{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "11:00",
+          "closes": "02:00"
+        }],
+        "telephone" : "+1 519-704-0293",
+        "sameAs": "https://www.facebook.com/burgerrebellionmidtown",
+        "priceRange": "$$",
+        "servesCuisine": "Hamburgers",
+        "hasMenu": "https://www.burgerrebellion.ca",
+        "paymentAccepted":"Cash, Credit Card"
+      }
+    ]
+  }
+  </script>
+
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
 
   <script>
