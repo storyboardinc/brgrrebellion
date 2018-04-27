@@ -149,13 +149,18 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto $spacing-unit/2 auto;
 }
 
+.btn-container {
+    padding-top: $spacing-unit/2;
+}
+
 a.btn {
+    display: inline-block;
     font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: .1em;
-    color: $cream;
+    color: $cream !important;
     background: $orange;
     border: 2px solid $gold;
     padding: 10px 12px 8px;
@@ -164,7 +169,7 @@ a.btn {
     &:hover,
     &:focus,
     &:active {
-        background: $gold;
+        background: $black;
         color: $cream;
         text-decoration: none;
     }
