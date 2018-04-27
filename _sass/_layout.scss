@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a.btn {
-    display: inline-block;
+    display: block;
     font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     line-height: 1;
@@ -163,7 +163,7 @@ a.btn {
     color: $cream !important;
     background: $orange;
     border: 2px solid $gold;
-    padding: 10px 12px 8px;
+    padding: 12px 12px 9px;
     text-align: center;
 
     &:hover,
@@ -175,7 +175,7 @@ a.btn {
     }
 
     @include media-query(500px) {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
@@ -211,7 +211,7 @@ a.btn {
 }
 
 .inner-content {
-    padding: $spacing-unit;
+    padding: $spacing-unit $spacing-unit $spacing-unit/2;
     color: $black;
 
     @include media-query(400px) {

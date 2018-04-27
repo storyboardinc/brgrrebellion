@@ -6,6 +6,23 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:title" content="Burger Rebellion">
+  <meta property="og:url" content="https://www.burgerrebellion.ca">
+  <meta property="og:description" content="Sarnia's Burger Joint">
+  <meta property="og:image" content="https://www.burgerrebellion.ca/img/the-zealot.jpg">
+  <meta property="restaurant:contact_info:website" content="https://www.burgerrebellion.ca">
+  <meta property="restaurant:contact_info:locality" content="Sarnia">
+  <meta property="restaurant:contact_info:region" content="Ontario">
+  <meta property="restaurant:contact_info:country_name" content="Canada">
+  <meta property="restaurant:contact_info:email" content="info@burgerrebellion.ca">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@brgrrebellion">
+  <meta name="twitter:title" content="Burger Rebellion">
+  <meta name="twitter:description" content="Sarnia's Burger Joint">
+  <meta name="twitter:image" content="https://www.burgerrebellion.ca/img/the-zealot.jpg">
+
   <script type="application/ld+json">
   {
     "@context": "http://schema.org",
