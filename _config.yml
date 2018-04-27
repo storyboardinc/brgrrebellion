@@ -9,7 +9,7 @@
 title: Burger Rebellion - Sarnia's Burger Joint
 email: info@burgerrebellion.ca
 description: > # this means to ignore newlines until "baseurl:"
-  We're grillers, not fighters. Our mission is in the name of a tasty meal. A revolution for the taste buds, an insurrection against the barons of mediocrity.
+  We're grillers, not fighters. Our mission is in the name of a tasty meal. A revolution for the taste buds. Our rebellion endures to free our sons and daughters from the tyranny of low-brow burgers.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.burgerrebellion.ca" # the base hostname & protocol for your site
 twitter_username: brgrrebellion
