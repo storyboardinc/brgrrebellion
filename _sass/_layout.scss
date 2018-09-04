@@ -240,6 +240,30 @@ a.btn {
     }
 }
 
+.delivery {
+    padding: 0 $spacing-unit;
+
+    h2 {
+        color: $cream;
+    }
+
+    .btn {
+        background: $black;
+        border-color: $orange;
+        &:hover,
+        &:focus,
+        &:active {
+            background: $gold;
+        }
+    }
+}
+
+.delivery-content {
+    padding: $spacing-unit $spacing-unit/2 $spacing-unit/2;
+    border: 2px solid $gold;
+    // background: $gold;
+}
+
 table {
     width: 100%;
     font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -355,7 +379,12 @@ h1, h2 {
     }
 }
 
-.about {
+// .about {
+//     padding: 0 $spacing-unit;
+//     border-bottom: 2px solid $orange;
+// }
+
+.about-content {
     max-width: 500px;
     margin: $spacing-unit*3 auto $spacing-unit*3 auto;
 
