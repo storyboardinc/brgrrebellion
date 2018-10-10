@@ -1,2 +1,2 @@
 # Burger Rebellion
-A burger truck in Downtown Sarnia
+Sarnia's Burger Joint
