@@ -135,6 +135,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.notification-gold {
+    background: $gold;
+}
+
 .brand {
     h1 {
         font-size: $base-font-size;
@@ -238,6 +242,12 @@ a.btn {
             outline: none;
         }
     }
+}
+
+.specials-box {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #midtown-specials {
