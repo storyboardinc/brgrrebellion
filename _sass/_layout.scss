@@ -155,6 +155,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-container {
     padding-top: $spacing-unit/2;
+
+    .btn {
+        display: inline-block;
+    }
 }
 
 a.btn {
