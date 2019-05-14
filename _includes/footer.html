@@ -1,7 +1,46 @@
 <footer class="site-footer">
   <img class="icon icon-footer" src="{{ site.baseurl }}/img/br-icon.svg" alt="Burger Rebellion">
-  <ul class="social-links">
-    <li><a href="https://www.instagram.com/brgrrebellion/" title="Instagram"><img src="{{ site.baseurl }}/img/instagram.svg" alt="Instagram"></a></li>
-    <li><a href="https://www.facebook.com/brgrrebellion" title="Facebook"><img src="{{ site.baseurl }}/img/facebook.svg" alt="Facebook"></a></li>
-  </ul>
 </footer>
+
+<script type="text/javascript">
+  var count = 0;
+  var feed1 = new Instafeed({
+  	target: 'instafeed1',
+	  get: 'user',
+	  userId: '3020529710',
+	  accessToken: '3020529710.0040604.fe957b6bde9d444e952460c5990fe43e',
+	  sortBy: 'most-recent',
+	  limit: '12',
+	  resolution: 'standard_resolution',
+	  success: function() {
+	    // reset the count every time instafeed.js reloads
+	    count = 0;
+	  },
+	  filter: function(image) {
+	    // only return true every 3rd image
+	    return (count++ % 3 === 0) ? true : false;
+	  }
+  });
+
+  // var count = 0;
+  var feed2 = new Instafeed({
+  	target: 'instafeed2',
+	  get: 'user',
+	  userId: '3020529710',
+	  accessToken: '3020529710.0040604.fe957b6bde9d444e952460c5990fe43e',
+	  sortBy: 'most-recent',
+	  limit: '12',
+	  resolution: 'standard_resolution',
+	  success: function() {
+	    // reset the count every time instafeed.js reloads
+	    count = 0;
+	  },
+	  filter: function(image) {
+	    // only return true every 3rd image
+	    return (count++ % 3 === 1) ? true : false;
+	  }
+  });
+
+  feed1.run();
+  feed2.run();
+</script>
