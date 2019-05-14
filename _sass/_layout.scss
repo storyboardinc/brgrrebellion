@@ -405,6 +405,12 @@ table.menu {
     margin-bottom: 0;
 }
 
+.section-heading {
+    @include media-query($on-palm) {
+        font-size: 16px;
+    }
+}
+
 .badge {
     font-family: "industry", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
